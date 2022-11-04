@@ -52,11 +52,10 @@ Your room document in your `rooms` collection should resemble the following:
     "addedUsers": ["John Wick", "Winston", "Ms. Perkins"]
 }
 
+```
 > HINT
 > `user`, `room`, and `addedUsers` refer to connection between users and their room and messages.
 > It's usually a good idea to utilize _id's to reference those.
-
-```
 
 ## Stories
 
