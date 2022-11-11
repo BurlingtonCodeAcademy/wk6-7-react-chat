@@ -89,3 +89,48 @@ As this is a group project, it would be much easier to work on it if everyone ha
 > Allowing updates on users means that collection associations need to be based on things user **CANNOT** change.
 
 - [ ] Add isAdmin to your user collection and build middleware that only allows admins to update and delete rooms and messages.
+
+# React Chat Front End
+
+Congratulations! You have successfully completed the backend section of the project, where you utilized Postman to test your API and make sure the routes are accessible and the data flows back and forth between your server and database.
+
+Now, it's time to build a user interface that your users will be able to interact with.
+
+## Stories
+
+### Setup
+
+Utilize `create-react-app` script to create a new instance of a React app within your `client` folder. Purge all unnecessary files and code until you have a fresh React blueprint. Create a `components` folder where you will store all of the components needed for this application.
+
+### Auth Component
+
+This component should allow the user to register and signup. It will require conditional rendering to switch between both states.
+
+It's functional end result should update the `localStorage` token in the browser's client. The token functionality is best put inside `App.jsx` so that other components can freely use it as well.
+
+### Rooms Component
+
+This component should allow the user to view all available rooms to them. When clicked upon a room, they should be invited to respective room. This can be a separate component or one that shows up in nav-like fashion. If the latter is your preference, please skip to the next component.
+
+### Room Component
+
+This component should consist of two sub-components: input and the view. The input allows user to input text into the field. After the input has been registered, the user will have a `send` button to the right of the field. This button should send the request over to the server's respective endpoint.
+
+> HINT
+> In order to mimic WebSockets functionality (stateful), fetch data from the server each time a request is sent.
+> This will allow client to view the new message immediately in the display field.
+
+The view sub-component should consist of an area where users can see all of the messages within a particular room.
+
+> NOTE
+> This application will be viewed by your potential employers. We don't specify any styling requirements.
+> It might be a good idea to utilize flex or grid and make sure it's visually simple and appealing to the eyes.
+
+## Icebox
+
+- [ ] Server has full CRUD functionality on messages. Basic requirement of this application is to send and retrieve messages. Add a button next to each message which will allow you to select `edit` and `delete` options. This will then send a request to update or delete respective message.
+
+- [ ] The user should only be allowed to delete their own messages.
+
+- [ ] Add admin functionality check which allows an admin to delete any messages.
+
